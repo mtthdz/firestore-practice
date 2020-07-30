@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAFgY3RCodsA3ta1ljZXz4Old97Ibcqulg",
+      authDomain: "auth-practice-f71f9.firebaseapp.com",
+      databaseURL: "https://auth-practice-f71f9.firebaseio.com",
+      projectId: "auth-practice-f71f9",
+      storageBucket: "auth-practice-f71f9.appspot.com",
+      messagingSenderId: "854953324319",
+      appId: "1:854953324319:web:f74037c113bbdd94604a2a"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="./app.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+    integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  
+  <h1>firestore practice</h1>
+  
+  <!-- signed out section -->
+  <section id="whenSignedOut">
+    <button id="signInBtn">Sign in with Google</button>
+  </section>
+
+  <!-- signed in section -->
+  <section id="whenSignedIn" hidden="true">
+    <div id="userDetails"></div>
+    <button id="signOutBtn">Sign Out</button>
+  </section>
+
+  <!-- db list -->
+  <section>
+    <ul id="thingsList"></ul>
+    <button id="createThing">Create something</button>
+  </section>
+
+
+
+</body>
+</html>
